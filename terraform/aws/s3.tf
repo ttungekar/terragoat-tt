@@ -110,6 +110,7 @@ resource "aws_s3_bucket" "data_science" {
   }
 }
 
+
 resource "aws_s3_bucket" "logs" {
   bucket = "${local.resource_prefix.value}-logs"
   acl    = "log-delivery-write"
@@ -139,3 +140,5 @@ resource "aws_s3_bucket" "logs" {
     yor_trace            = "01946fe9-aae2-4c99-a975-e9b0d3a4696c"
   })
 }
+
+
