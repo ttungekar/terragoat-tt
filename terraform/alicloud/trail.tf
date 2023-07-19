@@ -19,6 +19,7 @@ resource "alicloud_oss_bucket" "trail" {
     git_org              = "ttungekar"
     git_repo             = "terragoat-tt"
     yor_trace            = "9ce7077b-8195-4e71-aec6-ed1f769555dc"
+    yor_name             = "trail"
   }
 }
 
