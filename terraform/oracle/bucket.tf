@@ -19,6 +19,7 @@ resource "oci_objectstorage_bucket" "secretsquirrel" {
     git_org              = "ttungekar"
     git_repo             = "terragoat-tt"
     yor_trace            = "a854aa89-5141-4518-a5dc-0ffe3075f209"
+    yor_name             = "secretsquirrel"
   }
 }
 
