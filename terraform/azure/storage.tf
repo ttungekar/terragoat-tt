@@ -10,6 +10,7 @@ resource "azurerm_managed_disk" "example" {
   }
   tags = {
     yor_trace = "b187522a-a493-4b43-b4a0-a00516763b15"
+    yor_name  = "example"
   }
 }
 
@@ -41,7 +42,15 @@ resource "azurerm_storage_account" "example" {
     }
   }
   tags = {
-    yor_trace = "0e3e5fc5-6fe2-40a0-9ddf-9494461a3ee1"
+    yor_trace            = "0e3e5fc5-6fe2-40a0-9ddf-9494461a3ee1"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/storage.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "example"
   }
 }
 
