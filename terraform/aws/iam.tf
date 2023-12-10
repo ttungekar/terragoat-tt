@@ -2,19 +2,11 @@ resource "aws_iam_user" "user" {
   name          = "${local.resource_prefix.value}-user"
   force_destroy = true
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-user"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/iam.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "9b45b298-c1ea-426a-9644-610780021eaa"
-  })
+    yor_trace   = "2766a68c-cab3-4ed5-a149-535e5ccd7cfb"
+  }
 
 }
 
