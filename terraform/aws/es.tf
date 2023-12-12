@@ -16,6 +16,7 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
   }
   tags = {
     yor_trace = "f54d5cce-6aef-4f2d-a3bb-441f9b0377c1"
+    yor_name  = "monitoring-framework"
   }
 }
 
