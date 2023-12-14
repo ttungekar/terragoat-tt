@@ -9,6 +9,7 @@ resource azurerm_app_service_plan "example" {
   }
   tags = {
     yor_trace = "519258c0-1f10-418e-a872-73127c97367c"
+    yor_name  = "example"
   }
 }
 
@@ -22,7 +23,15 @@ resource azurerm_app_service "app-service1" {
     min_tls_version = "1.1"
   }
   tags = {
-    yor_trace = "11f7375b-0035-4d55-b9c7-203873a07ef9"
+    yor_trace            = "11f7375b-0035-4d55-b9c7-203873a07ef9"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/app_service.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "app-service1"
   }
 }
 
@@ -37,7 +46,15 @@ resource azurerm_app_service "app-service2" {
     enabled = false
   }
   tags = {
-    yor_trace = "5072057d-edf3-4eb3-bb6a-49dba9b35ecb"
+    yor_trace            = "5072057d-edf3-4eb3-bb6a-49dba9b35ecb"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/app_service.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "app-service2"
   }
 }
 

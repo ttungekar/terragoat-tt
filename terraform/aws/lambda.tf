@@ -18,6 +18,7 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
   tags = {
     yor_trace = "62d2a137-563a-4d31-aac6-b727d32978ac"
+    yor_name  = "iam_for_lambda"
   }
 }
 
@@ -39,6 +40,14 @@ resource "aws_lambda_function" "analysis_lambda" {
     }
   }
   tags = {
-    yor_trace = "0cd2d612-4662-4d46-aea2-c7931651cb8b"
+    yor_trace            = "0cd2d612-4662-4d46-aea2-c7931651cb8b"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/lambda.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "analysis_lambda"
   }
 }
