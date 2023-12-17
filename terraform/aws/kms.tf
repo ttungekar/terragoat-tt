@@ -5,6 +5,7 @@ resource "aws_kms_key" "logs_key" {
   deletion_window_in_days = 7
   tags = {
     yor_trace = "3030eaab-4ae5-4b27-9405-c69669df5d68"
+    yor_name  = "logs_key"
   }
 }
 
