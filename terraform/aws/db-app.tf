@@ -20,19 +20,11 @@ resource "aws_db_instance" "default" {
   monitoring_interval     = 0
   publicly_accessible     = true
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-rds"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "47c13290-c2ce-48a7-b666-1b0085effb92"
-  })
+    yor_trace   = "2e226a07-bae3-4bf1-8539-e9f4b3e58492"
+  }
 
   # Ignore password changes from tf plan diff
   lifecycle {
@@ -46,19 +38,11 @@ resource "aws_db_option_group" "default" {
   major_engine_version     = "8.0"
   option_group_description = "Terraform OG"
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-og"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "c8076043-5de7-4203-9a1c-b4e61900628a"
-  })
+    yor_trace   = "8811152e-57d0-43b3-af7e-76215fd98a36"
+  }
 }
 
 resource "aws_db_parameter_group" "default" {
@@ -78,19 +62,11 @@ resource "aws_db_parameter_group" "default" {
     apply_method = "immediate"
   }
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-pg"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "6432b3f9-3f45-4463-befc-2e0f2fbdffc1"
-  })
+    yor_trace   = "65b36e54-791e-43cf-83d7-4551b76adae7"
+  }
 }
 
 resource "aws_db_subnet_group" "default" {
@@ -98,38 +74,22 @@ resource "aws_db_subnet_group" "default" {
   subnet_ids  = ["${aws_subnet.web_subnet.id}", "${aws_subnet.web_subnet2.id}"]
   description = "Terraform DB Subnet Group"
 
-  tags = merge({
+  tags = {
     Name        = "sg-${local.resource_prefix.value}"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "b8368249-50c5-4a24-bdb0-9f83d197b11c"
-  })
+    yor_trace   = "ccb5378e-551f-4093-9eb2-b01ae2a53aaa"
+  }
 }
 
 resource "aws_security_group" "default" {
   name   = "${local.resource_prefix.value}-rds-sg"
   vpc_id = aws_vpc.web_vpc.id
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-rds-sg"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "7b251090-8ac1-4290-bd2e-bf3e16126430"
-  })
+    yor_trace   = "7e62a881-3ffc-495f-ba98-f6087325a8b6"
+  }
 }
 
 resource "aws_security_group_rule" "ingress" {
@@ -156,14 +116,7 @@ resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "6d33b2b9-2dd3-4915-b5d4-283152c928f1"
+    yor_trace = "0032d363-4a5d-4e55-808c-f764fd0ea6c2"
   }
 }
 
@@ -187,19 +140,11 @@ resource "aws_iam_role" "ec2role" {
 }
 EOF
 
-  tags = merge({
+  tags = {
     Name        = "${local.resource_prefix.value}-role"
     Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "d4b631c1-c1d0-4986-affb-fb8b94a6a7a5"
-  })
+    yor_trace   = "bcd74a63-c299-4cab-b9e1-d3ee773c4889"
+  }
 }
 
 resource "aws_iam_role_policy" "ec2policy" {
@@ -397,18 +342,10 @@ sudo chown root:root /var/www/html/index.php
 
 
 EOF
-  tags = merge({
-    Name = "${local.resource_prefix.value}-dbapp"
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "f7999d4e-c983-43ee-bd88-7903a6f8483e"
-  })
+  tags = {
+    Name      = "${local.resource_prefix.value}-dbapp"
+    yor_trace = "02f5f8b1-1fa5-41f5-b58c-b7c95ae257bf"
+  }
 }
 
 output "db_app_public_dns" {
