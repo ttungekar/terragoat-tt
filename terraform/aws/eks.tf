@@ -20,6 +20,7 @@ resource aws_iam_role "iam_for_eks" {
   assume_role_policy = data.aws_iam_policy_document.iam_policy_eks.json
   tags = {
     yor_trace = "d235debd-36e1-494e-bbdd-c2149c24a4a2"
+    yor_name  = "iam_for_eks"
   }
 }
 
@@ -38,8 +39,16 @@ resource aws_vpc "eks_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name      = "${local.resource_prefix.value}-eks-vpc"
-    yor_trace = "f9f19838-6a8b-4962-aee9-4d3da3a4de74"
+    Name                 = "${local.resource_prefix.value}-eks-vpc"
+    yor_trace            = "f9f19838-6a8b-4962-aee9-4d3da3a4de74"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/eks.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "eks_vpc"
   }
 }
 
@@ -52,6 +61,14 @@ resource aws_subnet "eks_subnet1" {
     Name                                            = "${local.resource_prefix.value}-eks-subnet"
     "kubernetes.io/cluster/${local.eks_name.value}" = "shared"
     yor_trace                                       = "feec5ad4-08ec-413f-ac84-b437814da3d2"
+    git_commit                                      = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file                                        = "terraform/aws/eks.tf"
+    git_last_modified_at                            = "2020-06-16 14:46:24"
+    git_last_modified_by                            = "nimrodkor@gmail.com"
+    git_modifiers                                   = "nimrodkor"
+    git_org                                         = "ttungekar"
+    git_repo                                        = "terragoat-tt"
+    yor_name                                        = "eks_subnet1"
   }
 }
 
@@ -64,6 +81,14 @@ resource aws_subnet "eks_subnet2" {
     Name                                            = "${local.resource_prefix.value}-eks-subnet2"
     "kubernetes.io/cluster/${local.eks_name.value}" = "shared"
     yor_trace                                       = "57445ca5-55d5-4f8a-84bb-d1e4f5a9da77"
+    git_commit                                      = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file                                        = "terraform/aws/eks.tf"
+    git_last_modified_at                            = "2020-06-16 14:46:24"
+    git_last_modified_by                            = "nimrodkor@gmail.com"
+    git_modifiers                                   = "nimrodkor"
+    git_org                                         = "ttungekar"
+    git_repo                                        = "terragoat-tt"
+    yor_name                                        = "eks_subnet2"
   }
 }
 
@@ -81,7 +106,15 @@ resource aws_eks_cluster "eks_cluster" {
     "aws_iam_role_policy_attachment.policy_attachment-AmazonEKSServicePolicy",
   ]
   tags = {
-    yor_trace = "4e9fd30b-e644-4c0c-a59b-14681b49d2bc"
+    yor_trace            = "4e9fd30b-e644-4c0c-a59b-14681b49d2bc"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/eks.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "eks_cluster"
   }
 }
 
