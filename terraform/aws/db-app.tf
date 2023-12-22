@@ -21,9 +21,17 @@ resource "aws_db_instance" "default" {
   publicly_accessible     = true
 
   tags = {
-    Name        = "${local.resource_prefix.value}-rds"
-    Environment = local.resource_prefix.value
-    yor_trace   = "3dd32876-22f0-4ccd-90c7-9adac60c4aad"
+    Name                 = "${local.resource_prefix.value}-rds"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "3dd32876-22f0-4ccd-90c7-9adac60c4aad"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 
   # Ignore password changes from tf plan diff
@@ -39,9 +47,17 @@ resource "aws_db_option_group" "default" {
   option_group_description = "Terraform OG"
 
   tags = {
-    Name        = "${local.resource_prefix.value}-og"
-    Environment = local.resource_prefix.value
-    yor_trace   = "b25e7030-f82a-4dd8-9412-21d2af50b1c7"
+    Name                 = "${local.resource_prefix.value}-og"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "b25e7030-f82a-4dd8-9412-21d2af50b1c7"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 }
 
@@ -63,9 +79,17 @@ resource "aws_db_parameter_group" "default" {
   }
 
   tags = {
-    Name        = "${local.resource_prefix.value}-pg"
-    Environment = local.resource_prefix.value
-    yor_trace   = "4d83c6e5-fdd1-4077-ad7d-27335ac293b4"
+    Name                 = "${local.resource_prefix.value}-pg"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "4d83c6e5-fdd1-4077-ad7d-27335ac293b4"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 }
 
@@ -75,9 +99,17 @@ resource "aws_db_subnet_group" "default" {
   description = "Terraform DB Subnet Group"
 
   tags = {
-    Name        = "sg-${local.resource_prefix.value}"
-    Environment = local.resource_prefix.value
-    yor_trace   = "ea8e0607-9edb-4864-ab95-ca0530ad1247"
+    Name                 = "sg-${local.resource_prefix.value}"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "ea8e0607-9edb-4864-ab95-ca0530ad1247"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 }
 
@@ -86,9 +118,17 @@ resource "aws_security_group" "default" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name        = "${local.resource_prefix.value}-rds-sg"
-    Environment = local.resource_prefix.value
-    yor_trace   = "bf75096a-f590-486c-b57a-6ac69f34ba9e"
+    Name                 = "${local.resource_prefix.value}-rds-sg"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "bf75096a-f590-486c-b57a-6ac69f34ba9e"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 }
 
@@ -116,7 +156,15 @@ resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
   tags = {
-    yor_trace = "4cb83091-3376-4fa5-aebe-deeda2121b39"
+    yor_trace            = "4cb83091-3376-4fa5-aebe-deeda2121b39"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "ec2profile"
   }
 }
 
@@ -141,9 +189,17 @@ resource "aws_iam_role" "ec2role" {
 EOF
 
   tags = {
-    Name        = "${local.resource_prefix.value}-role"
-    Environment = local.resource_prefix.value
-    yor_trace   = "4558c44f-58e0-4640-8882-16e84aa70296"
+    Name                 = "${local.resource_prefix.value}-role"
+    Environment          = local.resource_prefix.value
+    yor_trace            = "4558c44f-58e0-4640-8882-16e84aa70296"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "ec2role"
   }
 }
 
@@ -343,8 +399,16 @@ sudo chown root:root /var/www/html/index.php
 
 EOF
   tags = {
-    Name      = "${local.resource_prefix.value}-dbapp"
-    yor_trace = "b9561cac-87d1-4ad6-b167-48d83c24cd48"
+    Name                 = "${local.resource_prefix.value}-dbapp"
+    yor_trace            = "b9561cac-87d1-4ad6-b167-48d83c24cd48"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "db_app"
   }
 }
 

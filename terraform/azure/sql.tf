@@ -14,9 +14,17 @@ resource "azurerm_sql_server" "example" {
   administrator_login          = "ariel"
   administrator_login_password = "Aa12345678"
   tags = {
-    environment = var.environment
-    terragoat   = "true"
-    yor_trace   = "f298cbe0-69d7-478d-809a-76cc00efaf68"
+    environment          = var.environment
+    terragoat            = "true"
+    yor_trace            = "f298cbe0-69d7-478d-809a-76cc00efaf68"
+    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
+    git_file             = "terraform/azure/sql.tf"
+    git_last_modified_at = "2020-06-19 21:14:50"
+    git_last_modified_by = "Adin.Ermie@outlook.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "example"
   }
 }
 
@@ -51,7 +59,15 @@ resource "azurerm_mysql_server" "example" {
   public_network_access_enabled     = true
   ssl_enforcement_enabled           = false
   tags = {
-    yor_trace = "8190fe73-2464-4469-83ad-abedfa0ee379"
+    yor_trace            = "8190fe73-2464-4469-83ad-abedfa0ee379"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/sql.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "example"
   }
 }
 
@@ -69,7 +85,15 @@ resource "azurerm_postgresql_server" "example" {
   version                      = "9.5"
   ssl_enforcement_enabled      = false
   tags = {
-    yor_trace = "9108a338-0cf6-48b9-bae7-b66a033d19f1"
+    yor_trace            = "9108a338-0cf6-48b9-bae7-b66a033d19f1"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/sql.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "example"
   }
 }
 
