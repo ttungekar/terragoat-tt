@@ -10,6 +10,7 @@ resource "aws_s3_bucket" "data" {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     yor_trace   = "d33e0f8b-97f2-48da-bafe-7302ca7d20dc"
+    yor_name    = "data"
   }
 }
 
@@ -21,6 +22,7 @@ resource "aws_s3_bucket_object" "data_object" {
     Name        = "${local.resource_prefix.value}-customer-master"
     Environment = local.resource_prefix.value
     yor_trace   = "d20465f0-2d84-4e4f-87ad-af659030bbd3"
+    yor_name    = "data_object"
   }
 }
 
@@ -35,6 +37,7 @@ resource "aws_s3_bucket" "financials" {
     Name        = "${local.resource_prefix.value}-financials"
     Environment = local.resource_prefix.value
     yor_trace   = "e288930a-4edc-43ab-ad60-eb3ed3446b11"
+    yor_name    = "financials"
   }
 
 }
@@ -52,6 +55,7 @@ resource "aws_s3_bucket" "operations" {
     Name        = "${local.resource_prefix.value}-operations"
     Environment = local.resource_prefix.value
     yor_trace   = "44dd0b6d-1da6-4f76-9828-aff5462c6188"
+    yor_name    = "operations"
   }
 
 }
@@ -70,6 +74,7 @@ resource "aws_s3_bucket" "data_science" {
   force_destroy = true
   tags = {
     yor_trace = "6577a58f-34c7-4e07-bd5e-d1fa4f2d3879"
+    yor_name  = "data_science"
   }
 }
 
@@ -92,6 +97,7 @@ resource "aws_s3_bucket" "logs" {
     Name        = "${local.resource_prefix.value}-logs"
     Environment = local.resource_prefix.value
     yor_trace   = "44536050-1606-4af9-a076-c58ff82375cd"
+    yor_name    = "logs"
   }
 }
 

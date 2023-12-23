@@ -22,13 +22,29 @@ resource google_compute_instance "server" {
     serial-port-enable     = true
   }
   labels = {
-    yor_trace = "2da01b83-52cb-4504-bddd-a28fe193a60d"
+    yor_trace            = "2da01b83-52cb-4504-bddd-a28fe193a60d"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform__gcp__instances_tf"
+    git_last_modified_at = "2021-05-02-10-06-10"
+    git_last_modified_by = "nimrodkor"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "server"
   }
 }
 
 resource google_compute_disk "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
   labels = {
-    yor_trace = "884a5e5c-b2b5-4c45-8848-4e4bc0321fb8"
+    yor_trace            = "884a5e5c-b2b5-4c45-8848-4e4bc0321fb8"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform__gcp__instances_tf"
+    git_last_modified_at = "2021-05-02-10-06-10"
+    git_last_modified_by = "nimrodkor"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "unencrypted_disk"
   }
 }

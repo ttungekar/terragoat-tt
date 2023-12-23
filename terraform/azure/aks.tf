@@ -24,5 +24,6 @@ resource azurerm_kubernetes_cluster "k8s_cluster" {
   }
   tags = {
     yor_trace = "bc910993-4e0e-4450-b838-64d0bf650696"
+    yor_name  = "k8s_cluster"
   }
 }
