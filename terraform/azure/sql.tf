@@ -13,19 +13,11 @@ resource "azurerm_sql_server" "example" {
   version                      = "12.0"
   administrator_login          = "ariel"
   administrator_login_password = "Aa12345678"
-  tags = merge({
+  tags = {
     environment = var.environment
     terragoat   = "true"
-    }, {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "e5ec3432-e61f-4244-b59e-9ecc24ddd4cb"
-  })
+    yor_trace   = "d696860a-b953-4d3b-a282-b72fa581ca6c"
+  }
 }
 
 resource "azurerm_mssql_server_security_alert_policy" "example" {
@@ -59,14 +51,7 @@ resource "azurerm_mysql_server" "example" {
   public_network_access_enabled     = true
   ssl_enforcement_enabled           = false
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "1ac18c16-09a4-41c9-9a66-6f514050178e"
+    yor_trace = "ccb45805-24a3-4246-a127-0b3b5513ca0b"
   }
 }
 
@@ -84,14 +69,7 @@ resource "azurerm_postgresql_server" "example" {
   version                      = "9.5"
   ssl_enforcement_enabled      = false
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "9eae126d-9404-4511-9c32-2243457df459"
+    yor_trace = "98e2e103-6f1f-454d-88c5-a3bb54c6ee10"
   }
 }
 
