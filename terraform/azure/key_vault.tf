@@ -16,9 +16,17 @@ resource "azurerm_key_vault" "example" {
     ]
   }
   tags = {
-    environment = var.environment
-    terragoat   = true
-    yor_trace   = "6bec64c7-7b72-49d3-ab8b-5493eaf1d376"
+    environment          = var.environment
+    terragoat            = true
+    yor_trace            = "6bec64c7-7b72-49d3-ab8b-5493eaf1d376"
+    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
+    git_file             = "terraform/azure/key_vault.tf"
+    git_last_modified_at = "2020-06-19 21:14:50"
+    git_last_modified_by = "Adin.Ermie@outlook.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "example"
   }
 }
 
@@ -36,7 +44,15 @@ resource "azurerm_key_vault_key" "generated" {
     "wrapKey",
   ]
   tags = {
-    yor_trace = "4b469ad9-96d0-4148-9cfc-c036a90e9924"
+    yor_trace            = "4b469ad9-96d0-4148-9cfc-c036a90e9924"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/key_vault.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "generated"
   }
 }
 
@@ -45,6 +61,14 @@ resource "azurerm_key_vault_secret" "secret" {
   name         = "terragoat-secret-${var.environment}"
   value        = random_string.password.result
   tags = {
-    yor_trace = "ec7761a0-f0fc-4129-a986-47468f255c74"
+    yor_trace            = "ec7761a0-f0fc-4129-a986-47468f255c74"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/key_vault.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "secret"
   }
 }

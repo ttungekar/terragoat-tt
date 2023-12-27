@@ -5,6 +5,7 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name = azurerm_resource_group.example.name
   tags = {
     yor_trace = "85484aa6-180c-4234-8f27-ff1534b1b4a9"
+    yor_name  = "example"
   }
 }
 
@@ -26,7 +27,15 @@ resource "azurerm_network_interface" "ni_linux" {
     private_ip_address_allocation = "Dynamic"
   }
   tags = {
-    yor_trace = "0e7a8ad3-87c5-4c97-98cb-c9b988074d82"
+    yor_trace            = "0e7a8ad3-87c5-4c97-98cb-c9b988074d82"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/networking.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "ni_linux"
   }
 }
 
@@ -41,7 +50,15 @@ resource "azurerm_network_interface" "ni_win" {
     private_ip_address_allocation = "Dynamic"
   }
   tags = {
-    yor_trace = "27765125-186e-409f-860b-a951f4971784"
+    yor_trace            = "27765125-186e-409f-860b-a951f4971784"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/networking.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "ni_win"
   }
 }
 
@@ -74,7 +91,15 @@ resource azurerm_network_security_group "bad_sg" {
     destination_address_prefix = "*"
   }
   tags = {
-    yor_trace = "f24b69c2-4844-45c0-a19a-7196a5280d7c"
+    yor_trace            = "f24b69c2-4844-45c0-a19a-7196a5280d7c"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/networking.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "bad_sg"
   }
 }
 
@@ -83,7 +108,15 @@ resource azurerm_network_watcher "network_watcher" {
   name                = "terragoat-network-watcher-${var.environment}"
   resource_group_name = azurerm_resource_group.example.name
   tags = {
-    yor_trace = "fc9457b0-6022-48a1-bf47-8c8b5eff4a68"
+    yor_trace            = "fc9457b0-6022-48a1-bf47-8c8b5eff4a68"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/networking.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "network_watcher"
   }
 }
 
@@ -98,6 +131,14 @@ resource azurerm_network_watcher_flow_log "flow_log" {
     days    = 10
   }
   tags = {
-    yor_trace = "1f5138b0-db38-4097-b885-7baf0b459af0"
+    yor_trace            = "1f5138b0-db38-4097-b885-7baf0b459af0"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/azure/networking.tf"
+    git_last_modified_at = "2020-06-17 12:59:55"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "flow_log"
   }
 }

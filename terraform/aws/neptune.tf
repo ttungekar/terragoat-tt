@@ -9,6 +9,7 @@ resource "aws_neptune_cluster" "default" {
   storage_encrypted                   = false
   tags = {
     yor_trace = "451e6c13-3126-40d1-b1d2-ad53bfb18f2e"
+    yor_name  = "default"
   }
 }
 
@@ -20,7 +21,15 @@ resource "aws_neptune_cluster_instance" "default" {
   apply_immediately  = true
   #publicly_accessible                = true # No longer supported, API returns create error. See https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#CreateDBInstance
   tags = {
-    yor_trace = "469eba75-d7e2-4ac4-afdd-74409a89cb95"
+    yor_trace            = "469eba75-d7e2-4ac4-afdd-74409a89cb95"
+    git_commit           = "68e454047fb4520f27ed75ffa066ee09d75e325b"
+    git_file             = "terraform/aws/neptune.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "matt/nimrodkor"
+    git_org              = "ttungekar"
+    git_repo             = "terragoat-tt"
+    yor_name             = "default"
   }
 }
 

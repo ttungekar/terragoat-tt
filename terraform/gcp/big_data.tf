@@ -26,5 +26,6 @@ resource google_bigquery_dataset "dataset" {
   }
   labels = {
     yor_trace = "d086c357-36bb-456b-a4ff-66445d9a07d5"
+    yor_name  = "dataset"
   }
 }
